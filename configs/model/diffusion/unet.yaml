@@ -1,0 +1,14 @@
+type: "unet"
+image_channels: 3
+n_channels: 128
+
+augment_dim: 9
+
+
+ch_mults: [1, 2, 2, 2] # For cifar 10
+is_atten: [False, True, False, False]
+n_blocks: 2
+dropout_rate: 0.1
+n_heads: 1
+n_groups: 32
+learn_sigma: ${framework.diffusion.learn_sigma}

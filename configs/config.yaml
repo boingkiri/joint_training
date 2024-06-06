@@ -1,0 +1,38 @@
+defaults:
+  - framework: 
+    - diffusion/cm_diffusion
+  - model@_group_.diffusion: 
+    - diffusion/original_ict
+  - model@_group_.head: 
+    - diffusion/score_head
+  - ema: ema_ict
+  - dataset: cifar10
+  - exp: exp_setting
+
+# Training mode / evaluation model
+do_training: True
+do_sampling: True
+fid_during_training: True # True when calculating fid during training, otherwise, false.
+sampling_step: 1000
+saving_step: 10000
+
+# Training type
+type: ${framework.diffusion.type}
+exp_name: score_head_added
+tags: [iCT]
+
+# Miscellaneous
+num_sampling: 50000
+sampling_batch: 256
+rand_seed: 42
+n_jitted_steps: 4
+available_gpus: "0, 1, 2, 3, 4, 5, 6, 7"
+
+# Evaluation mode
+PAE_evaluation: False
+distributed_training: False
+
+hydra:  
+  output_subdir: null  
+  run:  
+    dir: .

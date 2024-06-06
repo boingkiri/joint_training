@@ -1,0 +1,42 @@
+type: "original_unetpp"
+
+image_channels: 3
+
+sigma_min : 0.002
+sigma_max : 80.0
+beta_min : 0.1
+beta_max : 20.0
+t_min : 0.002
+t_max : 80.0
+embedding_type : "fourier"
+double_heads : False
+
+
+
+name : "ncsnpp"
+ema_rate : 0.9999
+normalization : "GroupNorm"
+nonlinearity : "swish"
+nf : 128
+ch_mult : [2, 2, 2]
+num_res_blocks : 4
+attn_resolutions : [16]
+resamp_with_conv : True
+conditional : True
+fir : True
+fir_kernel : [1, 3, 3, 1]
+skip_rescale : True
+resblock_type : "biggan"
+progressive : "none"
+progressive_input : "residual"
+progressive_combine : "sum"
+attention_type : "ddpm"
+init_scale : 0.0
+# fourier_scale : 16
+fourier_scale: 0.02
+conv_size : 3
+rho : 7.0
+data_std : 0.5
+num_scales : 18
+# model.dropout = 0.13
+dropout : 0.3

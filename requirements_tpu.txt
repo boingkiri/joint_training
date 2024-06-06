@@ -1,0 +1,28 @@
+# deep learning framework
+# torch
+tensorflow
+tensorflow_datasets
+
+-f https://storage.googleapis.com/jax-releases/libtpu_releases.html
+jax[tpu]==0.4.20
+
+scipy==1.11.1
+orbax-checkpoint==0.5.7
+
+# -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+# jax[cuda11_pip]
+
+# JAX family framework
+orbax-checkpoint
+flax
+optax
+lpips_jax
+
+wandb
+hydra-core
+einops
+pillow
+matplotlib
+
+
+jax-smi

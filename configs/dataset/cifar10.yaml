@@ -1,0 +1,2 @@
+name: "cifar10"
+data_size: [32, 32, 3]

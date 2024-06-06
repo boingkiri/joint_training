@@ -1,0 +1,7 @@
+defaults:
+  - unetpp
+
+embedding_type: fourier
+encoder_type : residual
+decoder_type : standard
+resample_filter: [1, 3, 3, 1]

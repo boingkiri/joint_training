@@ -1,0 +1,23 @@
+# deep learning framework
+# torch
+tensorflow
+tensorflow_datasets
+
+jax[cuda12]==0.4.20
+
+scipy==1.11.1
+orbax-checkpoint==0.5.7
+
+# JAX family framework
+orbax-checkpoint
+flax
+optax
+lpips_jax
+
+wandb
+hydra-core
+einops
+pillow
+matplotlib
+
+jax-smi
