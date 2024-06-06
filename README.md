@@ -37,7 +37,7 @@ python main.py --config config_vanilla
 The inference is automatically conducted after training. If you want to conduct inference mode solely, the inferenece mode can be entered with the additional code:
 
 ```
-python main.py --config config ++do_training=False
+python main.py --config config --only_inference
 ```
 
 # Customized training

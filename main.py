@@ -65,10 +65,14 @@ def start(config: DictConfig):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Diffuion")
     parser.add_argument("--config", action="store", type=str, default="config")
+    parser.add_argument("--only_inference", action="store_true")
     args = parser.parse_args()
 
     config_path = "configs"
     
     with initialize(version_base=None, config_path=config_path) as cfg:
         cfg = compose(config_name=args.config)
+        if args.only_inference:
+            cfg.do_training = False
+            cfg.do_sampling = True
         start(cfg)
